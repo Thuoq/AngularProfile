@@ -28,9 +28,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/scss/style.scss"
             ],
-            "scripts": []
+            "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
           },
           "configurations": {
             "production": {
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-my-portfolio"
+    }
+  },
+  "defaultProject": "angular-my-portfolio",
+  "cli": {
+    "analytics": "7c2cc4f3-64c9-4b11-975a-5f6de6e24c04"
+  }
 }

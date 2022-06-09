@@ -1,0 +1,29 @@
+<section class="section" id="projects">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-12 col-md-10 col-lg-7 text-center">
+        <span class="badge badge-lg rounded bg-soft-alt-success fw-normal fs-13 text-uppercase">Work</span>
+        <h2 class="fs-2 fw-medium lh-1 text-dark my-3">My Projects</h2>
+        <p class="text-gray-700 fs-18 fs-lg mb-4 mb-md-5 lh-lg">
+          The projects below will talk about the projects that I have been working on. </p>
+      </div><!--end col-->
+    </div><!--end row-->
+    <div class="row">
+      <div class="col-12 filters-group-wrap">
+        <div class="filters-group mb-5">
+          <ul class="mb-0 list-unstyled filter-options filter-tab">
+            <li (click)="handleChooseTag('')" [class.active]="!currentTagChoose"
+                class="list-inline-item position-relative text-dark active"
+                data-group="all">All
+            </li>
+            <li (click)="handleChooseTag(tag)" *ngFor="let tag of tagsUnique"
+                [class.active]="tag === currentTagChoose" class="list-inline-item position-relative text-dark "
+                data-group="all"> {{tag}}
+            </li>
+          </ul>
+        </div>
+      </div><!--end col-->
+    </div><!--end row-->
+    <app-card-project-list [projects]="currentProjects"></app-card-project-list>
+  </div><!-- end container -->
+</section>

@@ -1,0 +1,5 @@
+<div class="row d-flex  g-1 justify-content-center" id="grid">
+  <div *ngFor="let project of projects" class="col-lg-4 col-md-6 picture-item">
+    <app-card-project [project]="project"></app-card-project>
+  </div><!-- end col -->
+</div><!-- end row -->
